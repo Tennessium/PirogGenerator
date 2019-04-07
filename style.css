@@ -1,0 +1,139 @@
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-image: url("storage/bg.png");
+}
+
+.root-content {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 15%;
+  left: 15%;
+  top: 15%;
+  bottom: 15%;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+}
+
+.my-button {
+  color: #FFFFFF;
+  border: none;
+  border-radius: 30px;
+  transition: .4s;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  margin: 20px;
+}
+
+.my-button:hover {
+  cursor: pointer;
+}
+
+.button-red {
+  height: calc(50% - 40px);
+  background-color: rgb(191, 89, 103);
+  flex-grow: 1;
+}
+
+.button-red:hover {
+  background-color: rgb(175, 73, 88);
+}
+
+.button-gray {
+  height: calc(50% - 40px);
+  background-color: rgb(137, 134, 126);
+  flex-grow: 1;
+}
+
+.button-gray:hover {
+  background-color: rgb(110, 108, 101);
+}
+
+.button-peach {
+  background-color: rgb(255, 189, 134);
+}
+
+.button-peach:hover {
+  background-color: rgb(245, 180, 130);
+}
+
+.generator-container {
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.about-container {
+  transition: 1s;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.my-button-text {
+  width: fit-content;
+  height: fit-content;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 200%;
+  position: relative;
+  top: 50%;
+  transform: perspective(1px) translateY(-50%);
+}
+
+.stropha {
+  font-size: 1.5vw;
+}
+
+.stix {
+  width: fit-content;
+  height: fit-content;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 200%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  transform: perspective(1px) translateY(-50%);
+}
+
+@media only screen and (max-width: 500px) {
+  .my-button-text {
+    font-size: 150%;
+  }
+}
+
+@media only screen and (max-width: 1000px), screen and (max-height: 700px) {
+  .root-content {
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    flex-direction: column;
+    border-radius: 0;
+  }
+  .generator-container {
+    height: 50%;
+  }
+  .about-container {
+    flex-direction: row;
+    height: 50%;
+  }
+  .button-red {
+    height: calc(100% - 40px);
+  }
+
+  .button-gray {
+    height: calc(100% - 40px);
+  }
+  .stropha {
+    font-size: 3vh;
+  }
+}
